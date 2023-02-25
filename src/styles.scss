@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+* {
+  color: #fff;
+}
+
+button {
+  // all: unset;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(0.5rem);
+  border-radius: 0.625rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  width: 200px;
+  height: 200px;
+}

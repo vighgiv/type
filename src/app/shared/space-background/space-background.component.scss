@@ -1,0 +1,9 @@
+div {
+  z-index: -1;
+  position: fixed;
+  width: 100vw; // good for F12 (devtools)
+
+  video {
+    // width: 100vw; // good for zoom
+  }
+}
