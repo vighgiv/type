@@ -1,0 +1,39 @@
+@import "../../variables.scss";
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $accent-color;
+  font-size: $small-font-size;
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.signup-text {
+  margin-top: 1.5rem;
+  font-size: $small-font-size;
+}
+
+button {
+  width: 50%;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+}

@@ -1,19 +1,25 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "./variables.scss";
 
-* {
-  color: #fff;
+@font-face {
+  font-family: Azeret;
+  src: url(./assets/fonts/AzeretMono-VariableFont_wght.ttf);
 }
 
-button {
-  // all: unset;
+* {
+  color: $base-font-color;
+  font-family: $base-font-family;
+}
+
+button,
+input {
+  all: unset;
 }
 
 .glass {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.375rem);
   border-radius: 0.625rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  width: 200px;
-  height: 200px;
+  padding: 1.5rem;
 }
