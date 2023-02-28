@@ -1,0 +1,62 @@
+@import "../../shared/styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.form-avatar-container {
+  .form-avatar-background {
+    position: relative;
+    top: 20%;
+    background-color: $accent-color-transparent;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+
+    .mat-icon {
+      @include svg-size(100%);
+      fill: #000;
+    }
+  }
+}
+
+form {
+  width: 18.75rem;
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 0.5rem 1rem;
+    background-color: $input-color;
+    border-radius: $border-radius;
+
+    &:focus {
+      background-color: $input-color-focus;
+    }
+
+    &.ng-invalid {
+      &.ng-touched {
+        outline: $error-border;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $accent-color;
+    font-size: $font-size-s;
+
+    &:hover,
+    &:focus {
+      color: $accent-color-hover;
+    }
+  }
+
+  button {
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: $border-radius;
+    background-color: $button-color;
+
+    &:hover,
+    &:focus {
+      background-color: $button-color-hover;
+    }
+  }
+}

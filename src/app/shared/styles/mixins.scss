@@ -1,0 +1,5 @@
+@mixin svg-size($size) {
+  font-size: $size;
+  width: $size;
+  height: $size;
+}

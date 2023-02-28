@@ -1,17 +1,27 @@
-<div class="vh-100 d-flex align-items-center justify-content-center">
+<div
+  class="d-flex flex-column align-items-center justify-content-center vh-100"
+>
+  <div class="form-avatar-container">
+    <div class="form-avatar-background">
+      <mat-icon svgIcon="avatar"></mat-icon>
+    </div>
+  </div>
   <div class="glass">
-    <div style="height: 100px"></div>
-    <form>
-      <div class="d-flex flex-column gap-3">
-        <input type="text" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="d-flex flex-column gap-3 mt-4">
+        <input type="text" placeholder="Email" formControlName="email" />
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
       </div>
       <div class="text-end"><a routerLink="">Forgot password?</a></div>
-      <div class="text-center">
+      <div class="text-center m-3">
         <button>Sign in</button>
       </div>
       <div class="signup-text">
-        Don't have an account? <a routerLink="">Sign up</a>
+        Don't have an account? <a routerLink="/register">Sign up</a>
       </div>
     </form>
   </div>
