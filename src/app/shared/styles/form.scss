@@ -2,13 +2,14 @@
 @import "../styles/mixins.scss";
 
 .form-avatar-container {
+  position: relative;
+  top: 4%;
   .form-avatar-background {
-    position: relative;
-    top: 20%;
     background-color: $accent-color-transparent;
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
+    padding: 0.5rem;
 
     .mat-icon {
       @include svg-size(100%);
@@ -22,6 +23,8 @@ form {
 
   input[type="text"],
   input[type="password"] {
+    box-sizing: border-box; // todo: why do i need to provide this here, why * isn't enough?
+    width: 100%;
     padding: 0.5rem 1rem;
     background-color: $input-color;
     border-radius: $border-radius;
@@ -29,12 +32,11 @@ form {
     &:focus {
       background-color: $input-color-focus;
     }
+  }
 
-    &.ng-invalid {
-      &.ng-touched {
-        outline: $error-border;
-      }
-    }
+  .error {
+    color: $error-color;
+    font-size: $font-size-s;
   }
 
   a {

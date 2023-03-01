@@ -15,9 +15,15 @@ export class AppComponent {
     private domSanitizer: DomSanitizer
   ) {
     this.matIconRegistry.addSvgIcon(
-      'avatar',
+      'avatar-login',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        '../assets/svgs/avatar.svg'
+        '../assets/svgs/avatar-login.svg'
+      )
+    );
+    this.matIconRegistry.addSvgIcon(
+      'avatar-register',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        '../assets/svgs/avatar-register.svg'
       )
     );
   }
