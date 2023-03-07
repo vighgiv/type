@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "type-e2e86": {
+      "hosting": {
+        "touch-type-app": [
+          "type-e2e86"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "type-e2e86"
+  }
+}

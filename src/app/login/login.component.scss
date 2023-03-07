@@ -1,10 +1,11 @@
-@import "../shared/styles/form.scss";
+@import '../shared/styles/form.scss';
 
-.forgot-password-text {
+.forgot-password-container {
   font-size: $font-size-s;
+  text-align: end;
 }
 
-.signup-text {
+.signup-text-container {
   text-align: center;
   font-size: $font-size-s;
 }

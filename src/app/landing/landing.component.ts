@@ -9,6 +9,6 @@ import { Router } from '@angular/router';
 export class LandingComponent {
   constructor(private router: Router) {}
   onClick() {
-    this.router.navigate(['login']);
+    this.router.navigate(['signin']);
   }
 }

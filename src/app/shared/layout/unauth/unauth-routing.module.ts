@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LandingComponent } from 'src/app/landing/landing.component';
 import { UnauthComponent } from './unauth.component';
+import { LandingComponent } from 'src/app/landing/landing.component';
 
 const routes: Routes = [
   {
@@ -10,21 +10,18 @@ const routes: Routes = [
     component: UnauthComponent,
     children: [
       {
-        path: 'login',
-        loadChildren: () =>
-          import('../../../login/login.module').then((m) => m.LoginModule),
+        path: 'signin',
+        loadChildren: () => import('../../../login/login.module').then((m) => m.LoginModule),
       },
       {
-        path: 'register',
+        path: 'signup',
         loadChildren: () =>
-          import('../../../register/register.module').then(
-            (m) => m.RegisterModule
-          ),
+          import('../../../register/register.module').then((m) => m.RegisterModule),
       },
       {
         path: '',
+        loadChildren: () => import('../../../landing/landing.module').then((m) => m.LandingModule),
         pathMatch: 'full',
-        component: LandingComponent,
       },
     ],
   },

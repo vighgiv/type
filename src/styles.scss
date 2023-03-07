@@ -1,6 +1,6 @@
-@import "~bootstrap/dist/css/bootstrap.css";
-
-@import "./app/shared/styles/variables.scss";
+@import '~bootstrap/dist/css/bootstrap.css';
+@import './app/shared/styles/variables.scss';
+@import './app/shared/styles/mat-styles.scss';
 
 @font-face {
   font-family: Rubik;
@@ -22,5 +22,8 @@ input {
   backdrop-filter: blur(0.25rem);
   border-radius: $border-radius-m;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
+
+  &.inverse {
+    background: rgba(0, 0, 0, 0.01);
+  }
 }

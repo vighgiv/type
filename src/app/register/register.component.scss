@@ -1,8 +1,9 @@
-@import "../shared/styles/form.scss";
+@import '../shared/styles/form.scss';
 
-.password-requirement-text {
+.password-requirement-container {
   color: $text-color-light;
   font-size: $font-size-s;
+  text-align: end;
 }
 
 form {

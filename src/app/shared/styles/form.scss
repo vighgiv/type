@@ -3,7 +3,7 @@
 
 .form-avatar-container {
   position: relative;
-  top: 4%;
+  top: 3%;
   .form-avatar-background {
     background-color: $accent-color-transparent;
     width: 8rem;
@@ -19,24 +19,34 @@
 }
 
 form {
-  width: 18.75rem;
+  width: 20rem;
+  padding: 1.5rem;
 
-  input[type="text"],
-  input[type="password"] {
-    box-sizing: border-box; // todo: why do i need to provide this here, why * isn't enough?
-    width: 100%;
-    padding: 0.5rem 1rem;
-    background-color: $input-color;
-    border-radius: $border-radius;
+  .inputFields-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1rem;
 
-    &:focus {
-      background-color: $input-color-focus;
+    .inputField {
+      input {
+        box-sizing: border-box; // todo: why do i need to provide this here, why * isn't enough?
+        width: 100%;
+        padding: $input-padding;
+        background-color: $input-color;
+        border-radius: $border-radius;
+
+        &:focus {
+          background-color: $input-color-focus;
+        }
+      }
     }
   }
 
   .error {
     color: $error-color;
     font-size: $font-size-s;
+    text-align: end;
   }
 
   a {
@@ -46,19 +56,28 @@ form {
 
     &:hover,
     &:focus {
-      color: $accent-color-hover;
+      color: $accent-color-active;
     }
   }
 
-  button {
-    width: 50%;
-    padding: 0.5rem;
-    border-radius: $border-radius;
-    background-color: $button-color;
+  .button-container {
+    display: grid;
+    justify-items: center;
+    margin: 1.5rem 0 1rem;
 
-    &:hover,
-    &:focus {
-      background-color: $button-color-hover;
+    button {
+      display: grid;
+      justify-items: center;
+      width: 50%;
+      padding: 0.5rem;
+      border-radius: $border-radius;
+      background-color: $button-color;
+
+      &:hover,
+      &:focus,
+      &:disabled {
+        background-color: $button-color-active;
+      }
     }
   }
 }

@@ -1,0 +1,21 @@
+// Notification styles
+.mat-mdc-snack-bar-container {
+  margin: 2rem 1rem !important;
+
+  .mdc-snackbar__surface {
+    background: none !important;
+    padding: 0 !important;
+
+    .mdc-snackbar__label {
+      padding: 0 !important;
+      font-size: $font-size !important;
+    }
+  }
+}
+
+// Spinner styles
+.mat-mdc-progress-spinner {
+  .mdc-circular-progress__indeterminate-circle-graphic {
+    stroke: $accent-color !important;
+  }
+}

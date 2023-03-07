@@ -1,6 +1,4 @@
-<div
-  class="d-flex flex-column align-items-center justify-content-center vh-100"
->
+<div class="d-flex flex-column align-items-center justify-content-center vh-100">
   <div class="form-avatar-container">
     <div class="form-avatar-background">
       <mat-icon svgIcon="avatar-register"></mat-icon>
@@ -8,62 +6,49 @@
   </div>
   <div class="glass">
     <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
-      <div class="d-flex flex-column gap-3 mt-4">
-        <div>
-          <input
-            type="text"
-            matInput
-            placeholder="Email*"
-            formControlName="email"
-          />
+      <div class="inputFields-container">
+        <div class="inputField">
+          <input type="text" formControlName="email" placeholder="Email" />
           <div *ngIf="isInvalidAndTouched('email')">
-            <div
-              *ngIf="this.registerForm.get('email')!.getError('email')"
-              class="error"
-            >
+            <div *ngIf="this.registerForm.get('email')!.getError('email')" class="error">
               Invalid email
             </div>
-            <div
-              *ngIf="this.registerForm.get('email')!.getError('required')"
-              class="error"
-            >
+            <div *ngIf="this.registerForm.get('email')!.getError('required')" class="error">
               Email required
             </div>
           </div>
         </div>
-        <div>
-          <input
-            type="password"
-            placeholder="Password*"
-            formControlName="password"
-          />
+        <div class="inputField">
+          <input type="password" formControlName="password" placeholder="Password" />
           <div
             *ngIf="
               isInvalidAndTouched('password') &&
               this.registerForm.get('password')!.getError('required')
             "
-            class="error"
-          >
+            class="error">
             Password required
           </div>
         </div>
       </div>
       <div
-        class="text-end password-requirement-text"
+        class="password-requirement-container"
         [ngClass]="
+          isInvalidAndTouched('password') &&
           this.registerForm.get('password')!.getError('minlength')
-            ? 'errors'
+            ? 'error'
             : ''
-        "
-      >
-        must be at least 8 characters
+        ">
+        must be at least 6 characters
       </div>
-      <div class="text-center m-3">
-        <button>Sign up</button>
+      <div class="button-container">
+        <button [disabled]="registerInProgress">
+          <span *ngIf="!registerInProgress">Sign up</span>
+          <div class="uploader-status">
+            <app-spinner *ngIf="registerInProgress"></app-spinner>
+          </div>
+        </button>
       </div>
-      <div class="signin-text">
-        Already have an account? <a routerLink="/login">Sign in</a>
-      </div>
+      <div class="signin-text">Already have an account? <a routerLink="/signin">Sign in</a></div>
     </form>
   </div>
 </div>
