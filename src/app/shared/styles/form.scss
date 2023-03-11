@@ -1,5 +1,5 @@
-@import "../../shared/styles/variables.scss";
-@import "../styles/mixins.scss";
+@import '../../shared/styles/variables.scss';
+@import '../styles/mixins.scss';
 
 .form-avatar-container {
   position: relative;
@@ -37,10 +37,20 @@ form {
         border-radius: $border-radius;
 
         &:focus {
-          background-color: $input-color-focus;
+          background-color: $input-color-active;
         }
       }
     }
+  }
+
+  .small-right {
+    font-size: $font-size-s;
+    text-align: end;
+  }
+
+  .small-center {
+    font-size: $font-size-s;
+    text-align: center;
   }
 
   .error {
@@ -74,9 +84,12 @@ form {
       background-color: $button-color;
 
       &:hover,
-      &:focus,
-      &:disabled {
+      &:focus {
         background-color: $button-color-active;
+      }
+
+      &:disabled {
+        background-color: $button-color-disabled;
       }
     }
   }

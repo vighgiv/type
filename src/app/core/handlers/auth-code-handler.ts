@@ -1,47 +1,70 @@
 import { NotificationContent } from 'src/app/shared/notification/model/notification-content';
+import { AuthCode } from './enum/auth-codes';
 
 // See all error codes: https://firebase.google.com/docs/auth/admin/errors
 export namespace AuthCodeHandler {
   export function convertToNotification(errorCode: string): NotificationContent {
-    const loginFailPrefix: string = 'Sign in failed.';
-    const registerFailPrefix: string = 'Sign up failed.';
-    const registerSuccessPrefix: string = 'Sign up successful.';
+    const ERROR_PREFIX = 'Error:';
+    const SUCCESS_PREFIX = 'Success!';
 
     switch (errorCode) {
-      // Own error codes
-      case 'app/invalid-credentials': {
+      case AuthCode.SUCCESS_REGISTRATION: {
         return {
-          header: loginFailPrefix,
-          message: 'Please enter valid credentials!'
-        } as NotificationContent;
-      }
-      case 'app/invalid-register': {
-        return {
-          header: registerFailPrefix,
-          message: 'Please fix the errors!'
-        } as NotificationContent;
-      }
-      case 'app/success-register': {
-        return {
-          header: registerSuccessPrefix,
+          header: SUCCESS_PREFIX,
           message: 'Welcome to {SpaceType}!'
-        } as NotificationContent;
+        };
+      }
+      case AuthCode.SUCCESS_RESET: {
+        return {
+          header: SUCCESS_PREFIX,
+          message: 'We have sent you an email.'
+        };
+      }
+      case AuthCode.INVALID_LOGIN_CREDENTIALS: {
+        return {
+          header: ERROR_PREFIX,
+          message: 'Please enter valid credentials!'
+        };
+      }
+      case AuthCode.INVALID_REGISTER_CREDENTIALS: {
+        return {
+          header: ERROR_PREFIX,
+          message: 'Please fix the error(s)!'
+        };
+      }
+      case AuthCode.INVALID_EMAIL: {
+        return {
+          header: ERROR_PREFIX,
+          message: 'Please enter a valid email!'
+        };
       }
       // Firebase error codes
+      case 'auth/wrong-password': {
+        return {
+          header: ERROR_PREFIX,
+          message: 'Incorrect password!'
+        };
+      }
+      case 'auth/email-already-in-use': {
+        return {
+          header: ERROR_PREFIX,
+          message: 'This email is already in use!'
+        };
+      }
       case 'auth/user-not-found': {
         return {
-          header: loginFailPrefix,
-          message: 'The email or password is incorrect!'
-        } as NotificationContent;
+          header: ERROR_PREFIX,
+          message: "This account doesn't exists!"
+        };
       }
-      case 'auth/invalid-email': {
+      case 'auth/too-many-requests': {
         return {
-          header: registerFailPrefix,
-          message: 'Please enter a valid email!'
-        } as NotificationContent;
+          header: 'Slow down.',
+          message: "You've made too many requests to the server!"
+        };
       }
       default:
-        return { header: 'Unknown:', message: errorCode } as NotificationContent;
+        return { header: 'Unknown error:', message: errorCode };
     }
   }
 }

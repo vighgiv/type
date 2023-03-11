@@ -17,6 +17,10 @@ export class AuthService {
     // });
   }
 
+  getCurrentUser() {
+    return this.auth.currentUser; // returns user object for logged-in users, otherwise returns null
+  }
+
   login(email: string, password: string): Promise<any> {
     return this.auth.signInWithEmailAndPassword(email, password);
   }
@@ -25,11 +29,11 @@ export class AuthService {
     this.auth.signOut();
   }
 
-  register(user: any): Promise<any> {
-    return this.auth.createUserWithEmailAndPassword(user.email, user.password);
+  resetPassword(email: string): Promise<any> {
+    return this.auth.sendPasswordResetEmail(email);
   }
 
-  getCurrentUser() {
-    return this.auth.currentUser; // returns user object for logged-in users, otherwise returns null
+  register(user: any): Promise<any> {
+    return this.auth.createUserWithEmailAndPassword(user.email, user.password);
   }
 }

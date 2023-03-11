@@ -9,46 +9,33 @@
       <div class="inputFields-container">
         <div class="inputField">
           <input type="text" formControlName="email" placeholder="Email" />
-          <div *ngIf="isInvalidAndTouched('email')">
-            <div *ngIf="this.registerForm.get('email')!.getError('email')" class="error">
-              Invalid email
-            </div>
-            <div *ngIf="this.registerForm.get('email')!.getError('required')" class="error">
-              Email required
-            </div>
+          <div *ngIf="isInvalidAndTouched('email')" class="error">
+            {{ getErrorMessage('email') }}
           </div>
         </div>
         <div class="inputField">
           <input type="password" formControlName="password" placeholder="Password" />
-          <div
-            *ngIf="
-              isInvalidAndTouched('password') &&
-              this.registerForm.get('password')!.getError('required')
-            "
-            class="error">
-            Password required
+          <div *ngIf="isInvalidAndTouched('password')" class="error">
+            {{ getErrorMessage('password') }}
           </div>
         </div>
       </div>
       <div
-        class="password-requirement-container"
-        [ngClass]="
-          isInvalidAndTouched('password') &&
-          this.registerForm.get('password')!.getError('minlength')
-            ? 'error'
-            : ''
-        ">
+        class="small-right color-light"
+        [ngClass]="{
+          error:
+            isInvalidAndTouched('password') &&
+            this.registerForm.get('password')!.getError('minlength')
+        }">
         must be at least 6 characters
       </div>
       <div class="button-container">
         <button [disabled]="registerInProgress">
           <span *ngIf="!registerInProgress">Sign up</span>
-          <div class="uploader-status">
-            <app-spinner *ngIf="registerInProgress"></app-spinner>
-          </div>
+          <app-spinner *ngIf="registerInProgress"></app-spinner>
         </button>
       </div>
-      <div class="signin-text">Already have an account? <a routerLink="/signin">Sign in</a></div>
+      <div class="small-center">Already have an account? <a routerLink="/signin">Sign in</a></div>
     </form>
   </div>
 </div>

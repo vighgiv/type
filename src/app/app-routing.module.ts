@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { GuestGuard } from './core/guards/guest.guard';
 import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./shared/layout/unauth/unauth.module').then((m) => m.UnauthModule),
-    canActivate: [GuestGuard]
+    loadChildren: () => import('./shared/layout/unauth/unauth.module').then((m) => m.UnauthModule)
   },
   {
     path: '',
@@ -20,6 +18,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [GuestGuard, AuthGuard]
+  providers: [AuthGuard]
 })
 export class AppRoutingModule {}

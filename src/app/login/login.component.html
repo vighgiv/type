@@ -8,27 +8,23 @@
     <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
       <div class="inputFields-container">
         <div class="inputField">
-          <input type="text" formControlName="email" placeholder="Email" />
+          <input type="email" formControlName="email" placeholder="Email" />
         </div>
         <div class="inputField">
           <input type="password" formControlName="password" placeholder="Password" />
         </div>
       </div>
-      <div class="forgot-password-container">
-        <a routerLink="">Forgot password?</a>
+      <div class="small-right">
+        <a routerLink="/reset-password">Forgot password?</a>
       </div>
       <div class="button-container">
         <button [disabled]="loginInProgress" onclick="this.blur()">
           <!-- onclick="this.blur()" to remove focus, after button has been clicked -->
           <span *ngIf="!loginInProgress">Sign in</span>
-          <div class="uploader-status">
-            <app-spinner *ngIf="loginInProgress"></app-spinner>
-          </div>
+          <app-spinner *ngIf="loginInProgress"></app-spinner>
         </button>
       </div>
-      <div class="signup-text-container">
-        Don't have an account? <a routerLink="/signup">Sign up</a>
-      </div>
+      <div class="small-center">Don't have an account? <a routerLink="/signup">Sign up</a></div>
     </form>
   </div>
 </div>

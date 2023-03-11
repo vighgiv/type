@@ -1,20 +1,5 @@
 @import '../shared/styles/form.scss';
 
-.password-requirement-container {
+.color-light {
   color: $text-color-light;
-  font-size: $font-size-s;
-  text-align: end;
-}
-
-form {
-  .ng-invalid {
-    &.ng-touched {
-      outline: $error-border;
-    }
-  }
-}
-
-.signin-text {
-  text-align: center;
-  font-size: $font-size-s;
 }
