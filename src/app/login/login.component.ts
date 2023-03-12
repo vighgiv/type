@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     } else {
       this.loginInProgress = true;
       this.authService
-        .login(this.loginForm.value.email, this.loginForm.value.password) // AuthGuard will automatically redirect the user on success
+        .loginUser(this.loginForm.value.email, this.loginForm.value.password) // AuthGuard will automatically redirect the user on success
         .catch((error) => {
           this.loginInProgress = false;
           this.notificationService.showError(AuthCodeHandler.convertToNotification(error.code));

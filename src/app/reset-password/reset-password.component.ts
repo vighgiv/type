@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -27,14 +28,6 @@ export class ResetPasswordComponent implements OnInit {
     this.resetForm = new FormGroup({
       email: new FormControl('', [Validators.required, emailValidator])
     });
-  }
-
-  isInvalidAndTouched(): boolean {
-    return this.resetForm.get('email')!.invalid && this.resetForm.get('email')!.touched;
-  }
-
-  getErrorMessage(): string {
-    return this.resetForm.get('email')!.hasError('required') ? 'Email required' : 'Email invalid';
   }
 
   onReset() {

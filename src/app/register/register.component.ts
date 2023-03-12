@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit {
     } else {
       this.registerInProgress = true;
       this.authService
-        .register(this.registerForm.value)
+        .registerUser(this.registerForm.value)
         .then(() => {
           this.notificationService.showSuccess(
             AuthCodeHandler.convertToNotification(AuthCode.SUCCESS_REGISTRATION)

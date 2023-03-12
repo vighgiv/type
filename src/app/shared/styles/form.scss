@@ -48,9 +48,10 @@ form {
     text-align: end;
   }
 
-  .small-center {
+  .small-center-mt {
     font-size: $font-size-s;
     text-align: center;
+    margin-top: 1rem;
   }
 
   .error {
@@ -73,7 +74,7 @@ form {
   .button-container {
     display: grid;
     justify-items: center;
-    margin: 1.5rem 0 1rem;
+    margin-top: 1.5rem;
 
     button {
       display: grid;

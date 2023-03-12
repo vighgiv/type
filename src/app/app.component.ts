@@ -27,5 +27,9 @@ export class AppComponent {
       'check',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/svgs/check.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'reset',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/svgs/reset.svg')
+    );
   }
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class AuthService {
   // userLoggedIn!: boolean;
 
-  constructor(private auth: AngularFireAuth) {
+  constructor(private auth: AngularFireAuth, private afs: AngularFirestore) {
     // this.auth.onAuthStateChanged((user) => {
     //   if (user) {
     //     this.userLoggedIn = true;
@@ -21,11 +22,11 @@ export class AuthService {
     return this.auth.currentUser; // returns user object for logged-in users, otherwise returns null
   }
 
-  login(email: string, password: string): Promise<any> {
+  loginUser(email: string, password: string): Promise<any> {
     return this.auth.signInWithEmailAndPassword(email, password);
   }
 
-  logout() {
+  logoutUser() {
     this.auth.signOut();
   }
 
@@ -33,7 +34,11 @@ export class AuthService {
     return this.auth.sendPasswordResetEmail(email);
   }
 
-  register(user: any): Promise<any> {
-    return this.auth.createUserWithEmailAndPassword(user.email, user.password);
+  registerUser(user: any): Promise<any> {
+    return this.auth.createUserWithEmailAndPassword(user.email, user.password).then((newUser) => {
+      this.afs.doc('/users/' + newUser.user!.uid).set({
+        currentLevel: 1
+      });
+    });
   }
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-// import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 
 import { ResetPasswordRoutingModule } from './reset-password-routing.module';
 import { ResetPasswordComponent } from './reset-password.component';
@@ -15,8 +15,8 @@ import { SpinnerModule } from '../shared/spinner/spinner.module';
     ResetPasswordRoutingModule,
     ReactiveFormsModule,
     NotificationModule,
-    SpinnerModule
-    // MatIconModule
+    SpinnerModule,
+    MatIconModule
   ]
 })
 export class ResetPasswordModule {}

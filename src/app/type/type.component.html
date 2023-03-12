@@ -1,1 +1,11 @@
-<p>type works!</p>
+<div class="app-container">
+  <div class="textbox">
+    <span
+      [ngClass]="compareText(letter, enteredText[i])"
+      *ngFor="let letter of currentPracticeText.split(''); let i = index"
+      >{{ letter }}</span
+    >
+    <textarea (input)="onInput($any($event.target).value)"></textarea>
+  </div>
+  <div class="keyboard">ads</div>
+</div>
