@@ -7,6 +7,6 @@ import { SpaceBackgroundComponent } from '../../space-background/space-backgroun
 
 @NgModule({
   declarations: [UnauthComponent, SpaceBackgroundComponent],
-  imports: [CommonModule, UnauthRoutingModule],
+  imports: [CommonModule, UnauthRoutingModule]
 })
 export class UnauthModule {}

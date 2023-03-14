@@ -6,11 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./type.component.scss']
 })
 export class TypeComponent {
-  currentPracticeText = 'Hello World';
+  currentPracticeText = 'Practise text to practise.';
   enteredText = '';
 
   compareText(letter: string, enteredLetter: string): string {
-    console.log(enteredLetter);
     if (!enteredLetter) {
       return 'pending';
     }
@@ -23,6 +22,9 @@ export class TypeComponent {
 
   onInput(value: any) {
     this.enteredText = value;
-    console.log(value);
+  }
+
+  cursor(one: number): string {
+    return one === this.enteredText.length ? 'cursor' : '';
   }
 }

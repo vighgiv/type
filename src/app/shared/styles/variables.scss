@@ -13,9 +13,13 @@ $text-color-light: #b1b1b1;
 $error-color: #dd3445;
 $error-border: 0.063rem solid $error-color; // 0.063rem == 1px
 
-$accent-color: #a78050;
-$accent-color-active: #755a38;
-$accent-color-transparent: rgba(167, 128, 80, 0.8);
+$primary-color: #3c608a;
+$primary-color-active: #294260;
+$primary-linear-gradient: linear-gradient(#243b55, #18253a);
+$primary-linear-gradient-transparent: linear-gradient(
+  rgba(36, 59, 85, 0.85),
+  rgba(24, 37, 58, 0.85)
+);
 
 $button-color: rgba(255, 255, 255, 0.2);
 $button-color-active: rgba(255, 255, 255, 0.3);

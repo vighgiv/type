@@ -5,7 +5,7 @@
   position: relative;
   top: 3%;
   .form-avatar-background {
-    background-color: $accent-color-transparent;
+    background: $primary-linear-gradient-transparent;
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
@@ -62,12 +62,12 @@ form {
 
   a {
     text-decoration: none;
-    color: $accent-color;
+    color: $primary-color;
     font-size: $font-size-s;
 
     &:hover,
     &:focus {
-      color: $accent-color-active;
+      color: $primary-color-active;
     }
   }
 
