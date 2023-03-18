@@ -24,6 +24,7 @@ form {
 
 // Spinner styles
 .mat-mdc-progress-spinner {
+  position: relative;
   .mdc-circular-progress__indeterminate-circle-graphic {
     stroke: $primary-color !important;
   }

@@ -19,7 +19,6 @@
       </div>
       <div class="button-container">
         <button [disabled]="loginInProgress" onclick="this.blur()">
-          <!-- onclick="this.blur()" to remove focus, after button has been clicked -->
           <span *ngIf="!loginInProgress">Sign in</span>
           <app-spinner *ngIf="loginInProgress"></app-spinner>
         </button>
