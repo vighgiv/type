@@ -12,62 +12,6 @@
   background: $primary-linear-gradient;
 }
 
-.textbox {
-  position: relative;
-  width: 500px;
-  height: 300px;
-  padding: 30px;
-}
-
-* {
-  font-family: 'Source Code Pro';
-}
-
-textarea {
-  outline: 2px solid red;
-  width: 50%;
-  position: absolute;
-  left: 30px;
-  color: transparent;
-  user-select: none;
-}
-
-.keyboard {
-  width: 500px;
-  height: 300px;
-}
-
-.error {
-  color: red;
-}
-
-.pending {
-  color: aliceblue;
-}
-
-.correct {
-  color: black;
-}
-
-.incorrect {
-  color: red;
-}
-
-textarea:focus ~ .cursor {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-@keyframes blink {
-  0% {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  49% {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  51% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: transparent;
-  }
+.asd {
+  width: 40rem;
 }

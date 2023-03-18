@@ -32,7 +32,7 @@ form {
       input {
         box-sizing: border-box; // todo: why do i need to provide this here, why * isn't enough?
         width: 100%;
-        padding: $input-padding;
+        padding: 0.5rem 1rem;
         background-color: $input-color;
         border-radius: $border-radius;
 

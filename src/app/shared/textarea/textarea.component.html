@@ -1,0 +1,8 @@
+<textarea (input)="onInput($any($event.target).value)"></textarea>
+<div class="practice-text">
+  <span
+    [ngClass]="[compareText(letter, enteredText[i]), cursor(i)]"
+    *ngFor="let letter of currentPracticeText.split(''); let i = index"
+    >{{ letter }}</span
+  >
+</div>

@@ -1,11 +1,5 @@
 <div class="app-container">
-  <div class="textbox">
-    <textarea (input)="onInput($any($event.target).value)"></textarea>
-    <span
-      [ngClass]="[compareText(letter, enteredText[i]), cursor(i)]"
-      *ngFor="let letter of currentPracticeText.split(''); let i = index"
-      >{{ letter }}</span
-    >
+  <div class="glass asd">
+    <app-textarea></app-textarea>
   </div>
-  <div class="keyboard">ads</div>
 </div>
