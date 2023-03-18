@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { AuthCodeHandler } from '../core/handlers/auth-code-handler';
+import { convertToNotification } from '../core/handlers/auth-code-handler';
 import { AuthCode } from '../core/handlers/enum/auth-codes';
 import { AuthService } from '../core/services/auth.service';
 import { emailValidator } from '../core/validators/email.validator';
@@ -28,16 +28,14 @@ export class LoginComponent implements OnInit {
   onLogin() {
     if (this.loginForm.invalid) {
       this.loginForm.markAllAsTouched();
-      this.notificationService.showError(
-        AuthCodeHandler.convertToNotification(AuthCode.INVALID_LOGIN_CREDENTIALS)
-      );
+      this.notificationService.showError(convertToNotification(AuthCode.INVALID_LOGIN_CREDENTIALS));
     } else {
       this.loginInProgress = true;
       this.authService
         .loginUser(this.loginForm.value.email, this.loginForm.value.password) // AuthGuard will automatically redirect the user on success
         .catch((error) => {
           this.loginInProgress = false;
-          this.notificationService.showError(AuthCodeHandler.convertToNotification(error.code));
+          this.notificationService.showError(convertToNotification(error.code));
           error.code === 'auth/wrong-password'
             ? this.loginForm.controls['password'].reset()
             : this.loginForm.reset();

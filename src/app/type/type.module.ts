@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { TypeRoutingModule } from './type-routing.module';
 import { TypeComponent } from './type.component';
-import { TextareaComponent } from '../shared/textarea/textarea.component';
+import { TextareaModule } from '../shared/textarea/textarea.module';
 
 @NgModule({
-  declarations: [TypeComponent, TextareaComponent],
-  imports: [CommonModule, TypeRoutingModule]
+  declarations: [TypeComponent],
+  imports: [CommonModule, TypeRoutingModule, TextareaModule]
 })
 export class TypeModule {}

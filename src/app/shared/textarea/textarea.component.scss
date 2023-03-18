@@ -1,45 +1,68 @@
 @import '../../shared/styles/variables.scss';
 
 * {
-  font-family: $monospace-font-family;
-  font-size: $font-size-xxl;
+  font-size: $font-size-xl;
 }
 
-textarea {
+p {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  word-break: break-all;
-  caret-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 100ms ease-in-out;
 
-  &:focus {
-    ~ .practice-text {
-      .cursor {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 0.25rem;
-        animation: blink 1.25s infinite;
+  &:has(~ .textarea-container textarea:focus) {
+    opacity: 0;
+  }
+}
+
+.textarea-container {
+  font-family: $monospace-font-family;
+  width: 70ch;
+  padding: 2rem 4rem;
+  filter: blur(5px);
+  transition: 100ms ease-in-out;
+
+  &:has(textarea:focus) {
+    filter: none;
+  }
+
+  textarea {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 2rem 4rem;
+    overflow: hidden;
+    word-wrap: break-word;
+    color: transparent;
+
+    &:focus {
+      ~ .practice-text {
+        .cursor {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 0.25rem;
+          animation: blink 1.25s infinite;
+        }
       }
     }
   }
-}
 
-.practice-text {
-  user-select: none;
-  white-space: pre-wrap;
-  outline: 1px solid green;
+  .practice-text {
+    user-select: none;
+    white-space: pre-wrap;
 
-  span {
-    outline: 1px solid red;
-  }
+    .pending {
+      color: #777;
+    }
 
-  .pending {
-    color: #777;
-  }
-
-  .incorrect {
-    color: $error-color !important;
-    background-color: $error-color-transparent;
-    border-radius: 0.25rem;
+    .incorrect {
+      color: $error-color;
+      background-color: $error-color-transparent;
+      border-radius: 0.25rem;
+    }
   }
 }
 

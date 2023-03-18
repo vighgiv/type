@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { AuthCodeHandler } from '../core/handlers/auth-code-handler';
+import { convertToNotification } from '../core/handlers/auth-code-handler';
 import { AuthCode } from '../core/handlers/enum/auth-codes';
 import { AuthService } from '../core/services/auth.service';
 import { emailValidator } from '../core/validators/email.validator';
@@ -33,21 +32,17 @@ export class ResetPasswordComponent implements OnInit {
   onReset() {
     this.resetForm.markAllAsTouched();
     if (this.resetForm.invalid) {
-      this.notificationService.showError(
-        AuthCodeHandler.convertToNotification(AuthCode.INVALID_EMAIL)
-      );
+      this.notificationService.showError(convertToNotification(AuthCode.INVALID_EMAIL));
     } else {
       this.resetInProgress = true;
       this.authService
         .resetPassword(this.resetForm.value.email)
         .then(() => {
-          this.notificationService.showSuccess(
-            AuthCodeHandler.convertToNotification(AuthCode.SUCCESS_RESET)
-          );
+          this.notificationService.showSuccess(convertToNotification(AuthCode.SUCCESS_RESET));
           this.router.navigate(['/signin']);
         })
         .catch((error) => {
-          this.notificationService.showError(AuthCodeHandler.convertToNotification(error.code));
+          this.notificationService.showError(convertToNotification(error.code));
         })
         .finally(() => {
           this.resetInProgress = false;

@@ -1,4 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { position } from 'caret-pos';
 
 @Component({
   selector: 'app-textarea',
@@ -6,7 +7,12 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./textarea.component.scss']
 })
 export class TextareaComponent {
-  currentPracticeText = 'fj fj fj fj fj jf jf jf jf fj fj fj fj fj jf jf jf jf';
+  @ViewChild('textarea')
+  textarea!: ElementRef;
+
+  @Input()
+  practiceText!: string;
+
   enteredText = '';
 
   compareText(letter: string, enteredLetter: string): string {
@@ -18,11 +24,15 @@ export class TextareaComponent {
     return '';
   }
 
-  onInput(value: any) {
-    this.enteredText = value;
+  caretPos(index: number): string {
+    return index === this.enteredText.length ? 'cursor' : '';
   }
 
-  cursor(one: number): string {
-    return one === this.enteredText.length ? 'cursor' : '';
+  moveCaretToEndOfText() {
+    position(this.textarea.nativeElement, this.enteredText.length);
+  }
+
+  onInput(value: string) {
+    this.enteredText = value;
   }
 }

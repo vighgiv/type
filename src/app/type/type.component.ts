@@ -5,4 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './type.component.html',
   styleUrls: ['./type.component.scss']
 })
-export class TypeComponent {}
+export class TypeComponent {
+  currentPracticeText =
+    'It is your turn. Every creature comfort is mine. It will only cost five cents.';
+}

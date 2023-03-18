@@ -1,8 +1,16 @@
-<textarea (input)="onInput($any($event.target).value)"></textarea>
-<div class="practice-text">
-  <span
-    [ngClass]="[compareText(letter, enteredText[i]), cursor(i)]"
-    *ngFor="let letter of currentPracticeText.split(''); let i = index"
-    >{{ letter }}</span
-  >
+<p>
+  <b>Click here to start typing...</b>
+</p>
+<div class="textarea-container">
+  <textarea
+    (keydown)="moveCaretToEndOfText()"
+    (input)="onInput($any($event.target).value)"
+    #textarea></textarea>
+  <div class="practice-text">
+    <span
+      [ngClass]="[compareText(letter, enteredText[i]), caretPos(i)]"
+      *ngFor="let letter of practiceText.split(''); let i = index"
+      >{{ letter }}</span
+    >
+  </div>
 </div>

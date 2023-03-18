@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { AuthCodeHandler } from '../core/handlers/auth-code-handler';
+import { convertToNotification } from '../core/handlers/auth-code-handler';
 import { AuthCode } from '../core/handlers/enum/auth-codes';
 import { AuthService } from '../core/services/auth.service';
 import { emailValidator } from '../core/validators/email.validator';
@@ -25,22 +25,22 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  isInvalidAndTouched(field: string): boolean {
-    return this.registerForm.get(field)!.invalid && this.registerForm.get(field)!.touched;
+  isInvalidAndTouched(field: string): boolean | undefined {
+    return this.registerForm.get(field)?.invalid && this.registerForm.get(field)?.touched;
   }
 
   getErrorMessage(field: string): string {
-    if (this.registerForm.get(field)!.hasError('required')) {
+    if (this.registerForm.get(field)?.hasError('required')) {
       return `${field.charAt(0).toUpperCase() + field.slice(1)} required`;
     }
-    return this.registerForm.get(field)!.hasError('invalid') ? 'Email invalid' : '';
+    return this.registerForm.get(field)?.hasError('invalid') ? 'Email invalid' : '';
   }
 
   onRegister() {
     if (this.registerForm.invalid) {
       this.registerForm.markAllAsTouched();
       this.notificationService.showError(
-        AuthCodeHandler.convertToNotification(AuthCode.INVALID_REGISTER_CREDENTIALS)
+        convertToNotification(AuthCode.INVALID_REGISTER_CREDENTIALS)
       );
     } else {
       this.registerInProgress = true;
@@ -48,12 +48,12 @@ export class RegisterComponent implements OnInit {
         .registerUser(this.registerForm.value)
         .then(() => {
           this.notificationService.showSuccess(
-            AuthCodeHandler.convertToNotification(AuthCode.SUCCESS_REGISTRATION)
+            convertToNotification(AuthCode.SUCCESS_REGISTRATION)
           );
         })
         .catch((error) => {
           this.registerInProgress = false;
-          this.notificationService.showError(AuthCodeHandler.convertToNotification(error.code));
+          this.notificationService.showError(convertToNotification(error.code));
         });
     }
   }
