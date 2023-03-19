@@ -16,13 +16,16 @@ $error-color: #dd3445;
 $error-color-transparent: #dd344546;
 $error-border: 0.063rem solid $error-color; // 0.063rem == 1px
 
-$primary-color: #3c608a;
-$primary-color-active: #294260;
-$primary-linear-gradient: linear-gradient(#243b55, #18253a);
+$primary-color: #a78050; // blue: #3c608a;
+$primary-color-active: #755a38; // blue: #294260;
+$primary-linear-gradient: linear-gradient(
+  #434343 0%,
+  black 100%
+); // blue: linear-gradient(#243b55, #18253a);
 $primary-linear-gradient-transparent: linear-gradient(
-  rgba(36, 59, 85, 0.85),
-  rgba(24, 37, 58, 0.85)
-);
+  rgba(167, 128, 80, 0.85),
+  rgba(100, 72, 38, 0.85)
+); // blue: rgba(36, 59, 85, 0.85); rgba(24, 37, 58, 0.85);
 
 $button-color: rgba(255, 255, 255, 0.2);
 $button-color-active: rgba(255, 255, 255, 0.3);
