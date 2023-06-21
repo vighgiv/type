@@ -7,6 +7,11 @@
 }
 
 @font-face {
+  font-family: 'Bruno Ace';
+  src: url(./assets/fonts/BrunoAceSC-Regular.ttf);
+}
+
+@font-face {
   font-family: 'Source Code Pro';
   src: url(./assets/fonts/SourceCodePro-VariableFont_wght.ttf);
 }
@@ -24,6 +29,7 @@
 body {
   color: $text-color;
   font-family: $base-font-family;
+  background-color: black;
 }
 
 button,
@@ -46,7 +52,37 @@ textarea {
   border-radius: $border-radius-m;
   border: 1px solid rgba(255, 255, 255, 0.1);
 
+  &.bright {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
   &.inverse {
     background: rgba(0, 0, 0, 0.01);
+  }
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px;
+  color: $text-color;
+  padding: 1rem 2.5rem;
+  transition: 100ms ease-in-out;
+
+  &.solid {
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color-active;
+    }
+  }
+
+  &.outline {
+    border: 2px solid $primary-color;
+
+    &:hover {
+      border-color: $primary-color-active;
+      background-color: $primary-color-active;
+    }
   }
 }
