@@ -17,7 +17,7 @@ export class NotificationService {
         message: notificationContent.message
       },
       verticalPosition: 'top',
-      duration: 6000,
+      duration: 60000,
       panelClass: ['glass', 'inverse']
     });
   }
@@ -28,5 +28,6 @@ export class NotificationService {
 
   showError(notificationContent: NotificationContent) {
     this.open(NotificationIcon.ERROR, notificationContent);
+    console.log(notificationContent);
   }
 }

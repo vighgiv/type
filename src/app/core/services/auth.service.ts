@@ -37,7 +37,8 @@ export class AuthService {
   registerUser(user: any): Promise<any> {
     return this.auth.createUserWithEmailAndPassword(user.email, user.password).then((newUser) => {
       this.afs.doc('/users/' + newUser.user?.uid).set({
-        currentLevel: 1
+        currentLevel: 1,
+        currentSubLevel: 1
       });
     });
   }

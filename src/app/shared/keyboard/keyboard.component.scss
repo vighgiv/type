@@ -1,0 +1,83 @@
+.keyboard {
+  font-family: Helvetica;
+  font-size: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  user-select: none;
+
+  .key {
+    transition: ease-in-out 0.1s;
+    width: 50px;
+
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nextKey {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .lfn {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 6px 6px;
+    border-radius: 5px;
+    transition: ease-in-out 0.1s;
+  }
+
+  .rfn {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 6px 6px 0;
+    border-radius: 5px;
+    transition: ease-in-out 0.1s;
+  }
+
+  .tab {
+    width: 75px;
+  }
+
+  .backslash {
+    width: 65px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .caps {
+    width: 90px;
+  }
+
+  .enter {
+    width: 105px;
+    transition: ease-in-out 0.1s;
+  }
+
+  .lshift {
+    width: 120px;
+    transition: ease-in-out 0.1s;
+  }
+
+  .rshift {
+    width: 130px;
+    transition: ease-in-out 0.1s;
+  }
+
+  .space {
+    width: 325px;
+    margin-left: 235px;
+    border-radius: 5px;
+    transition: ease-in-out 0.1s;
+  }
+
+  .row {
+    height: 50px;
+    display: flex;
+    gap: 5px;
+  }
+}

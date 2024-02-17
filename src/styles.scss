@@ -73,7 +73,7 @@ textarea {
     background-color: $primary-color;
 
     &:hover {
-      background-color: $primary-color-active;
+      background-color: $primary-color-active-transparent;
     }
   }
 
@@ -81,8 +81,8 @@ textarea {
     border: 2px solid $primary-color;
 
     &:hover {
-      border-color: $primary-color-active;
-      background-color: $primary-color-active;
+      border-color: transparent;
+      background-color: $primary-color-active-transparent;
     }
   }
 }

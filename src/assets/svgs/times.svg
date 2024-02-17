@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
-
-<defs>
-</defs>
-<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-	<path d="M 11 90 c -2.815 0 -5.63 -1.074 -7.778 -3.222 c -4.295 -4.296 -4.295 -11.261 0 -15.557 l 68 -68 c 4.297 -4.296 11.26 -4.296 15.557 0 c 4.296 4.296 4.296 11.261 0 15.557 l -68 68 C 16.63 88.926 13.815 90 11 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(221,52,69); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-	<path d="M 79 90 c -2.815 0 -5.63 -1.074 -7.778 -3.222 l -68 -68 c -4.295 -4.296 -4.295 -11.261 0 -15.557 c 4.296 -4.296 11.261 -4.296 15.557 0 l 68 68 c 4.296 4.296 4.296 11.261 0 15.557 C 84.63 88.926 81.815 90 79 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(221,52,69); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-</g>
-</svg>
+<svg id="Réteg_1" data-name="Réteg 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216.89 139.77"><defs><style>.cls-1{fill:#fff;}</style></defs><title>space_type_pikto</title><path class="cls-1" d="M141.89,97l-6.37,6.36L108.44,76.25,81.36,103.33,75,97l27.09-27.08L75,42.8l6.37-6.36,27.08,27.08,27.08-27.08,6.37,6.36L114.81,69.89Z"/><path d="M108.44.27a69.62,69.62,0,1,0,69.61,69.62A69.69,69.69,0,0,0,108.44.27Zm0,130.23a60.62,60.62,0,1,1,60.61-60.61A60.68,60.68,0,0,1,108.44,130.5Z"/><polygon points="114.81 69.89 141.89 96.97 135.52 103.33 108.44 76.25 81.36 103.33 74.99 96.97 102.08 69.89 74.99 42.8 81.36 36.44 108.44 63.52 135.52 36.44 141.89 42.8 114.81 69.89"/></svg>

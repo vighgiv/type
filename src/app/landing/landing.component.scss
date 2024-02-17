@@ -4,7 +4,7 @@ img {
   z-index: -1;
   position: absolute;
   height: $image-height;
-  right: calc($image-height / -2);
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
 }

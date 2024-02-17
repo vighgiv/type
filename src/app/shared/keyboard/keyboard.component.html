@@ -1,0 +1,60 @@
+<div class="keyboard">
+  <div class="row">
+    <div class="lfn tab glass bright">⇥</div>
+    <div
+      *ngFor="let letter of row1"
+      class="key glass bright"
+      [ngClass]="{
+        nextKey:
+          practiceText[currentIndex] &&
+          practiceText[currentIndex].toUpperCase() === letter &&
+          isFocused
+      }">
+      {{ letter }}
+    </div>
+    <div class="backslash glass bright">\</div>
+  </div>
+  <div class="row">
+    <div class="lfn caps glass bright">⇪</div>
+    <div
+      *ngFor="let letter of row2"
+      class="key glass bright"
+      [ngClass]="{
+        nextKey:
+          practiceText[currentIndex] &&
+          practiceText[currentIndex].toUpperCase() === letter &&
+          isFocused
+      }">
+      {{ letter }}
+    </div>
+    <div class="rfn enter glass bright">↵</div>
+  </div>
+  <div class="row">
+    <div
+      class="lfn lshift glass bright"
+      [ngClass]="{ nextKey: isLeftShift(practiceText[currentIndex]) }">
+      ⇧
+    </div>
+    <div
+      *ngFor="let letter of row3"
+      class="key glass bright"
+      [ngClass]="{
+        nextKey:
+          practiceText[currentIndex] &&
+          practiceText[currentIndex].toUpperCase() === letter &&
+          isFocused
+      }">
+      {{ letter }}
+    </div>
+    <div
+      class="rfn rshift glass bright"
+      [ngClass]="{ nextKey: isRightShift(practiceText[currentIndex]) }">
+      ⇧
+    </div>
+  </div>
+  <div class="row">
+    <div
+      class="space glass bright"
+      [ngClass]="{ nextKey: practiceText[currentIndex] === ' ' && isFocused }"></div>
+  </div>
+</div>

@@ -2,9 +2,13 @@
   <b>Click here to start typing...</b>
 </p>
 <div class="textarea-container">
+  <!-- (keydown)="moveCaretToEndOfText()" -->
   <textarea
     (keydown)="moveCaretToEndOfText()"
     (input)="onInput($any($event.target).value)"
+    (focus)="toggleFocus(true)"
+    (blur)="toggleFocus(false)"
+    spellcheck="false"
     #textarea></textarea>
   <div class="practice-text">
     <span

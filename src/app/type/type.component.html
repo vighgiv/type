@@ -1,5 +1,12 @@
 <div class="app-container">
   <div class="glass bright">
-    <app-textarea [practiceText]="currentPracticeText"></app-textarea>
+    <app-textarea
+      [practiceText]="currentPracticeText"
+      (charCount)="updateCharCount($event)"
+      (isFocused)="isKeyboardFocused = $event"></app-textarea>
   </div>
+  <app-keyboard
+    [practiceText]="currentPracticeText"
+    [currentIndex]="currentCharCount"
+    [isFocused]="isKeyboardFocused"></app-keyboard>
 </div>
