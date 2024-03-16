@@ -13,7 +13,7 @@ export class TextareaComponent {
   practiceText!: string;
 
   @Output()
-  charCount = new EventEmitter<number>();
+  currentText = new EventEmitter<string>();
 
   @Output()
   isFocused = new EventEmitter<boolean>();
@@ -40,13 +40,9 @@ export class TextareaComponent {
     );
   }
 
-  onFocus() {
-    this.charCount.emit(this.textarea.nativeElement.textLength);
-  }
-
   onInput(value: string) {
     this.enteredText = value;
-    this.charCount.emit(this.textarea.nativeElement.textLength);
+    this.currentText.emit(this.enteredText);
   }
 
   toggleFocus(isFocused: boolean) {

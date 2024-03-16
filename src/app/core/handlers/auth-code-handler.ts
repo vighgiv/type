@@ -11,7 +11,7 @@ export function convertToNotification(errorCode: string): NotificationContent {
     case AuthCode.SUCCESS_REGISTRATION: {
       return {
         header: SUCCESS_PREFIX,
-        message: 'Welcome to {SpaceType}!'
+        message: 'Welcome to SpaceType!'
       };
     }
     case AuthCode.SUCCESS_RESET: {

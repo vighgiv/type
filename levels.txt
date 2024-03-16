@@ -1,0 +1,141 @@
+1
+      1: 'add ads adds all',
+      2: 'ask dad all daff',
+      3: 'flask asks lads salad',
+      4: 'alas alfalfa ad kaka',
+      5: 'all fads fad salsas',
+      6: 'salad dallas fall add',
+      7: 'lads lad sass flask',
+      8: 'salsa lass as ads',
+      9: 'dads salads flak daff'
+
+2
+      1: 'filial ked feeds dieselise daisies dele isle deal added lifelike jellied ills alkalised',
+      2: 'lakeside falsified leafs diseases sallied dies id seed leaked file isles falsifies',
+      3: 'sidles defies dialled sales kills silk lea seeded asked dailies slide seek dell fade',
+      4: 'skidlid aliases sill kid ladle filled alsike jellies ski leak assai falafel alkalises',
+      5: 'alleles kef fees ideals false idea ail fide ideas elide see aisles sell ilk fails',
+      6: 'assesses lilies laded deli sledded else deskill jails leaks dislikes leaded keel',
+      7: 'deeded sea idles eked fells idealised skill eddied leafed elf ladles eddies seeks',
+      8: 'skiffs disease life elks desks sills deadfall flea eases defilade aids flail dial',
+      9: 'fills eels lilied skids flaked faked diesels fled leadless fakes diesel alias disk',
+      10: 'lids deedless fissile faded dill sail saddles lied seas jells lessee lease dieselises',
+
+3
+      1: 'sellers relief laurels ferries dissuade darker rid readers assures ferried refilled refused ear fluff',
+      2: 'defuse defrauds duller differed afraid fused riddle fluid duels saluki fuddled dears sued idealisers rails',
+      3: 'dress riffle ruffled rallied slurs reused fuse referred frauds reassure desire faradisers dark faders',
+      4: 'sudsier sire desirer fissure riders allude leisured dissuader issueless firer direr dialler differ saddler',
+      5: 'feudal fellers safari duke sassafras due issued juju darks leered urea ireful reseed salaries drear rake',
+      6: 'luau daffier slurries lieder fire lauder druid afeard eluded derider fares dulled alleluia duel slur seder',
+      7: 'sillier eerier jarl surfer laser eared drier rial sullies seeker slider residual dearer faker lieu realises',
+      8: 'raffles rusk durra releaser lauds filers firedrake redress deferred rear reified idealiser eras krill airier',
+      9: 'duff leafier reuses address riddles lurked dissuaded fries falderal allure fur reeds arises filarial'
+
+4
+      1: 'allows foreword wooer dowries sasswood follows forwards woos followers rowsv',
+      2: 'woofers rowdier foresaw rosewood rower forward dowelled worse owls swore',
+      3: 'forswears flow workloads fiddlewood workweek safflower reword fireworks flowerless dowdier',
+      4: 'slowed warlord sword worked wallows worries dowse widow jowl warriors',
+      5: 'woollier redwood lifework dowses fowler wooded owed allowed worker swallowed',
+      6: 'woollies roadwork woofer worrier wildflowers slower woof woodlouse swearword fallow',
+      7: 'slow foreswear woodworker rowel sowered woodier seafowl owes forswear weirdo',
+      8: 'reworks drowse works swords would awoke worried reworked sow willows',
+      9: 'farrow disallow arrowed fellow woe wordier warrior wildfowler flower wildwood'
+
+5
+      1: 'scullion coincides necked landrace judiciousness includes reckoned crinkles coordinal conceded',
+      2: 'colander wince incalescences encarnalise differenced curiousness nanoseconds callowness affiance recurrences',
+      3: 'crowner decidedness conclusions crinkled crassness esurience accordions corners financiers anacondas',
+      4: 'ascenders innocence unclosed incise candescence reassurance discordances crinkle rescission canons',
+      5: 'casinos condoned condo confusions condolence nicked concusses coniine confounds uncloak',
+      6: 'ascendance candour winces clowns needlecord calendula canonised incandescence runic fallaciousness',
+      7: 'scornfulness closeness cense coronal conical conferred ordnances corneous accordion incenses',
+      8: 'recessional conscienceless scandalous fencers discerns canalised discussions dereference knickers cordon',
+      9: 'descended scruffiness cornflower landlocked condones condenser incidences ordinances cineol recklessness'
+
+6
+      1: 'loafs, recluses, asdic, ions, cowardliness. candlewood. weeklies. audio. fluoresce. cauliflower.',
+      2: 'anserine, weal, edacious, non, cooks. allures. unlearn. nonsensical. offended. codifiers',
+      3: 'dawns, nearside, afford, redial, unconsidered. friendlessness. eider. fracas. licensure. racecourses.',
+      4: 'errands, underworld, corned, skiffle, coleus. renounces. cernuous. adored. seasick. derided.',
+      5: 'reconsider, ruefulness, curious, denied, druidical. knacks. dollied. earless. serenade. isle.',
+      6: 'necks, cruises, darns, rednecks, sidewalks. faradise. knell. cuisine. clouded. adjoins',
+      7: 'cleaners, irk, inaccuracies, kalian, driers. rallied. junks. arrow. flank. discos.',
+      8: 'recline, ensnares, cornfield, nausea, discourses. refusals. secures. conferee. scrawniness. declare'
+
+7
+      1: 'Kissin Caicos Nora Eldon Nilsen Larsen Duroc Iceni Dada ISO',
+      2: 'Lincoln Urdu Icelandic Cundick Konrad Finland Caracas Arius Freudian Ireland ',
+      3: 'Cowell Rae Rojak Delius Erwin Linus Linnaeus Orsk SW Iranian',
+      4: 'Faulknerian Ricans Afrikanerised Julia Elsie SCCS Ferreira Rawlins Diane Fidel',
+      5: 'Dodona Ronnie Carrick NCC Winslow LEDs Oakland Ecuador Einkorn Wieland',
+      6: 'Isolde Nejd Caledonian Swink Lionel Cilician Caelian Sunderland NCO Jew',
+      7: 'London NaCl SC Nadine Susan Lucien Wilsonian Jodi WA Keenan',
+      8: 'Floridian Dukas Deane Faliscan Susu Saunders Adele Lucille Kirk Waikiki',
+      9: 'Seljuk Caesarian Eddie Clifford Kondo Kendall Wilkes Fafnir Julie Anne'
+
+8
+      1: 'animadversion vermeil midwives malevolence cavemen Asimov moviemaker recidivism arrivisme',
+      2: 'removed Moldavian Simmonsville missives Markov mavericks vacuums vacuumed unmoved Vikram',
+      3: 'Melville omnivore nevermore medieval Melvin misadvise Moravianised marvellous',
+      4: 'vamoose moved manoeuvres misconceived Almoravide flavoursome mover dismissive moves remove',
+      5: 'vacuum duumvir Moravia missive emissive Mandeville massiveness Silverman Romanov vanadium',
+      6: 'MVS VMS venom Maldive manoeuvred Marvin microwave effluvium maverick vermicide',
+      7: 'medievalism revisionism Markova mauve vamoosed overcome commoves mediaeval Sivaism waveforms',
+      8: 'forevermore vermicelli overcomes misconceive Livermore vernacularism marvel Calvinism'
+
+9
+      1: 'errantry tediously crafty discontinuity metonymically motorcycle affectedly oddity naturalistically',
+      2: 'indiscreetly Taymyr instantly assimilatory stymied covertly moderately Tylerises tyrannosaur',
+      3: 'restrainedly tunefully distally intrusively sleety varsity tactility antonymic mystification',
+      4: 'insensitively syntactical unicyclist dynamometric covetously accumulatively asymmetrical cytosine',
+      5: 'multifariously Starkey inordinately intransitively crystallite conjunctively carroty stridency',
+      6: 'cattery flattery Wyatt catalyser immaculately coincidently circuitously manufactory Mariolatry',
+      7: 'laity utility unattractively militarily study sensationally flintily flyswatter destructivity sacristy',
+      8: 'flyswatter flyswatter storyteller storyteller Lysistrata Lysistrata crystalline crystalline',
+      9: 'electrolysis electrolysis tyrannicide tyrannicide immaturely contradictorily intramuscularly'
+
+10
+      1: 'garnishes heathenising unhooking Goshen hackneying refreshingly Gandhiism',
+      2: 'roughcast eightieth trough marching admonishingly humidifying wheedling',
+      3: 'Huntington anaesthesiology discharging guildhall hydrology hungered',
+      4: 'Christianising doughtier sharing homogenisation ditching safelight thwarting',
+      5: 'haltingly whamming hedging overarching recharged heritages greenhorn gasohol ',
+      6: 'lightweights strengthen almighty achingly changing technological forthright',
+      7: 'theurgist thoroughly lighthouse harming undercharge megohms entrenching',
+      8: 'rightful hogshead rehearing thoroughness forethought unchangingly hamstring',
+      9: 'mahogany sidelight deadweight almightiness hangers hearing thatching dragonish'
+
+11
+      1: 'equipped picturesque Pequot quintuplets quintuple equiponderate perquisites quip',
+      2: 'aquaplane Passamaquoddy quintuplet picturesquely equip quadruplicated physique',
+      3: 'equipollence prerequisite equipage equipping quadruped quadrupling',
+      4: 'quicksteps piquing quadriplegic quadruplicates quadruplets piquet piquantly',
+      5: 'acquaintanceship quadrupeds quipped quadriplegia quadriceps palanquin quipping',
+      6: 'opaqueness plaque equiponderant quadrupled sesquipedalian',
+      7: 'piquancy equipments equipoise quadruple equipotent opaquely',
+      8: 'prerequisites quips parquetry quipster picaresque quickstep',
+      9: 'quadruplicating equips Arequipa pique quintupled quadruplicate quadrup sles'
+
+12
+      1: 'inexcusableness Roxburgh brainstorm obnoxiously exhibit expectably exhibitor',
+      2: 'chatterbox inexplicableness expendable exchangeable inexpressibleness exhibition coxcombry',
+      3: 'bollix deoxyribonucleic bureaux tinderbox exacerbations inexhaustibility bissextile',
+      4: 'Boxers exhibitive expressible inexcusably buxomly exobiological inextirpable',
+      5: 'matchbox exhaustible horsebox betwixt extractible shadowbox excusably paintbrush',
+      6: 'exorable Excalibur boxy exacerbates exorbitance Luxembourg biconvexity',
+      7: 'expellable execrableness Benelux exchangeability inflexible inextensible inexcusable',
+      8: 'exuberate inexhaustibly carboxylic unexceptionable textbooks inexpressibly exportable Huxtable',
+      9: 'beaux Uxbridge exacerbate braxy inexpiably expendability carboxyl Xenophobia expectable'
+
+13
+      1: 'lazing frazzles bizarreness azotising Zho Skrowaczewski Iztaccihuatl gazelle zigzagging frizzles',
+      2: 'kolkhoz Helmholtz Dalzell organizes enzymes rhizome hazarding buzzard mizzenmast',
+      3: 'enzyme Ziegfelds Heinze Balthazar schizophrenia diazomethane realization breathalyzer enzymologist denizens',
+      4: 'zapping Nebuchadnezzar Dietz rhizoid blazingly reorganizations Schulz Zinman',
+      5: 'whizzing zoomed schmaltzy razed piazza garbanzo blazer Dzungaria freezing',
+      6: 'disorganizing Mendoza fuzzed Lorentzian lollapalooza haziness wizardry Bydgoszcz tweezers crazier',
+      7: 'bazookas chimpanzee Belshazzar gizzard Jezebel blazoner subzero oozier Frizette',
+      8: 'Zuider Frazil stargazing Katz pizzicato frenziedly wheezed azan Zuidholland Suzanne',
+      9: 'Nullstellensatz anaesthetizations specialization Bergonzi zapped schizophrenia',

@@ -1,1 +1,18 @@
-<p>level-end works!</p>
+<div class="modal glass blurry inverse">
+  <h1>{{ message }}</h1>
+  <h3>Your score:</h3>
+  <div class="score">{{ score }} %</div>
+  <h3 class="speed">
+    Speed:
+    <span
+      >{{
+        data.currentPracticeText.split(' ').length / (data.timer / 1000 / 60) | number : '1.0-0'
+      }}
+      wpm
+    </span>
+  </h3>
+  <div class="actions">
+    <p class="continue">Press <span class="space"></span> space to continue</p>
+    <p class="retry">Press <span class="enter">↵</span> enter to retry</p>
+  </div>
+</div>

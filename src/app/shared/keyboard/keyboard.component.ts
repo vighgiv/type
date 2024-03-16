@@ -28,20 +28,4 @@ export class KeyboardComponent {
       ? true
       : false;
   }
-
-  // speak(i: number) {
-  //   let utterance: SpeechSynthesisUtterance;
-
-  //   switch (this.currentPracticeText[i]) {
-  //     case ' ':
-  //       utterance = new SpeechSynthesisUtterance('space');
-  //       break;
-  //     case '.':
-  //       utterance = new SpeechSynthesisUtterance('dot');
-  //       break;
-  //     default:
-  //       utterance = new SpeechSynthesisUtterance(this.currentPracticeText[i]);
-  //   }
-  // speechSynthesis.speak(utterance);
-  // }
 }

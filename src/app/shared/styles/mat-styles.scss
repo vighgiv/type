@@ -29,3 +29,8 @@ form {
     stroke: $primary-color !important;
   }
 }
+
+// Dialog styles
+.mdc-dialog__surface {
+  background-color: transparent !important;
+}

@@ -1,5 +1,46 @@
 @import '../shared/styles/variables.scss';
 
+.guide-wrapper {
+  z-index: 10;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0;
+  transition: 0.1s;
+
+  .guide {
+    width: 750px;
+    padding: 1rem;
+
+    img {
+      width: 100%;
+      user-select: none;
+    }
+  }
+  &.open {
+    scale: 1;
+  }
+}
+
+.game,
+.logout {
+  position: absolute;
+  top: 16px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.game {
+  left: 16px;
+}
+.logout {
+  right: 16px;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -9,4 +50,58 @@
 
   width: 100vw;
   height: 100vh;
+
+  .levels {
+    width: 805px;
+    display: flex;
+    gap: 0.75rem;
+
+    > div {
+      flex: 1;
+      aspect-ratio: 1;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+
+    .current {
+      cursor: default;
+    }
+  }
+
+  .utils {
+    width: 805px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -0.5rem;
+    height: 30px;
+
+    .left {
+      display: flex;
+      gap: 0.5rem;
+
+      > a {
+        cursor: pointer;
+        width: 30px;
+      }
+    }
+
+    > span {
+      display: flex;
+      align-items: center;
+    }
+
+    .sublevel {
+      padding: 0.125rem 0.375rem;
+    }
+
+    .timer {
+      padding: 0.125rem 0.25rem;
+      display: flex;
+
+      img {
+        width: 22px;
+      }
+    }
+  }
 }

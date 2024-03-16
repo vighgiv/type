@@ -1,12 +1,54 @@
+<div
+  class="guide-wrapper"
+  [ngClass]="{ open: isGuideOpened }"
+  (click)="isGuideOpened = !isGuideOpened">
+  <div class="glass bright guide">
+    <img src="../../assets/svgs/guide.svg" alt="guide" />
+  </div>
+</div>
+<div class="glass bright logout" (click)="logout()">
+  <img src="../../assets/svgs/logout.svg" alt="" />
+</div>
+<a routerLink="/game" class="game glass bright"><img src="../../assets/svgs/game.svg" alt="" /></a>
 <div class="app-container">
+  <div class="levels">
+    <div
+      *ngFor="let level of NUMBER_OF_LEVELS; let i = index"
+      (click)="changeLevel(i + 1)"
+      class="glass"
+      [ngClass]="i + 1 === userData?.currentLevel ? 'current' : 'bright'">
+      {{ i + 1 }}
+    </div>
+  </div>
+  <div class="utils">
+    <div class="left">
+      <a class="help glass bright" (click)="isGuideOpened = !isGuideOpened">
+        <img src="../../assets/svgs/help.svg" alt="" />
+      </a>
+
+      <a (click)="resetSubLevel()" class="reset glass bright">
+        <img src="../../assets/svgs/restart.svg" alt="" />
+      </a>
+    </div>
+    <span class="sublevel glass bright"
+      >{{ userData ? this.userData.subLevels[this.userData.currentLevel - 1] : '' }} /
+      {{ levelData ? objectKeys(levelData).length : '' }}</span
+    >
+    <span class="timer glass bright">
+      <img
+        src="{{ isTimerRunning ? '../../assets/svgs/play.svg' : '../../assets/svgs/pause.svg' }}"
+        alt="" />
+      {{ timer | date : 'm:ss' }}
+    </span>
+  </div>
   <div class="glass bright">
     <app-textarea
       [practiceText]="currentPracticeText"
-      (charCount)="updateCharCount($event)"
-      (isFocused)="isKeyboardFocused = $event"></app-textarea>
+      (currentText)="updateCurrentText($event)"
+      (isFocused)="textareaFocused($event)"></app-textarea>
   </div>
   <app-keyboard
     [practiceText]="currentPracticeText"
-    [currentIndex]="currentCharCount"
+    [currentIndex]="currentText.length"
     [isFocused]="isKeyboardFocused"></app-keyboard>
 </div>

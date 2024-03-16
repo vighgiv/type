@@ -11,6 +11,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'game',
+    loadChildren: () => import('./game/game.module').then((m) => m.GameModule),
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'signin',
     loadChildren: () => import('./login/login.module').then((m) => m.LoginModule),
     canActivate: [GuestGuard]

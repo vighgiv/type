@@ -1,0 +1,41 @@
+<div class="glass bright logout" (click)="logout()">
+  <img src="../../assets/svgs/logout.svg" alt="" />
+</div>
+<a routerLink="/type" class="glass bright back"><img src="../../assets/svgs/back.svg" alt="" /></a>
+<div class="center">
+  <div class="utils">
+    <div class="glass bright hp">
+      <img *ngFor="let _ of [].constructor(hp)" src="../../assets/svgs/heart.svg" alt="" />
+      <img
+        *ngFor="let _ of [].constructor(3 - hp)"
+        src="../../assets/svgs/heart-outline.svg"
+        alt="" />
+    </div>
+    <span class="glass bright padding"
+      >Points: <b>{{ points }}</b></span
+    >
+    <span class="glass bright padding timer">
+      <img
+        src="{{
+          timerId && hp != 0 ? '../../assets/svgs/play.svg' : '../../assets/svgs/pause.svg'
+        }}"
+        alt="" />
+      {{ timer | date : 'm:ss' }}
+    </span>
+  </div>
+  <div class="board glass bright" #board>
+    <p class="game-start" [ngClass]="{ started: this.timerId }">START</p>
+    <img
+      (click)="start()"
+      [ngClass]="{ started: this.timerId }"
+      src="../../assets/svgs/play.svg"
+      alt="" />
+    <p *ngIf="hp === 0" class="game-over">GAME OVER</p>
+    <img
+      *ngIf="hp === 0"
+      (click)="restart()"
+      src="../../assets/svgs/restart.svg"
+      alt=""
+      class="restart" />
+  </div>
+</div>

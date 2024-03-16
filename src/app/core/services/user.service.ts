@@ -23,19 +23,18 @@ export class UserService {
     );
   }
 
-  updateLevel(level: number): Promise<any> {
+  updateCurrentLevel(userData: any): Promise<any> {
     return this.currentUser.then((user) => {
       this.db.collection('users').doc(user!.uid).update({
-        currentLevel: level,
-        currentSubLevel: 1
+        currentLevel: userData.currentLevel
       });
     });
   }
 
-  updateSubLevel(subLevel: number): Promise<any> {
+  updateSubLevel(userData: any): Promise<any> {
     return this.currentUser.then((user) => {
       this.db.collection('users').doc(user!.uid).update({
-        currentSubLevel: subLevel
+        subLevels: userData.subLevels
       });
     });
   }

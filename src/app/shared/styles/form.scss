@@ -31,7 +31,7 @@ form {
 
     .inputField {
       input {
-        box-sizing: border-box; // todo: why do i need to provide this here, why * isn't enough?
+        box-sizing: border-box;
         width: 100%;
         padding: 0.5rem 1rem;
         background-color: $input-color;
