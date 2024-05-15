@@ -22,7 +22,7 @@ export class TypeComponent implements OnInit {
   userData!: any;
   currentPracticeText = '';
   currentText = '';
-  isKeyboardFocused = false;
+  isTextareaFocused = false;
   timer = 0;
   isTimerRunning = false;
   intervalId: any;
@@ -43,7 +43,7 @@ export class TypeComponent implements OnInit {
   }
 
   textareaFocused(event: boolean) {
-    this.isKeyboardFocused = event;
+    this.isTextareaFocused = event;
     if (!event) {
       this.startStopTimer(event);
     }

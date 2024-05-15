@@ -1,8 +1,10 @@
-<div
-  class="guide-wrapper"
-  [ngClass]="{ open: isGuideOpened }"
-  (click)="isGuideOpened = !isGuideOpened">
+<div class="guide-wrapper" [ngClass]="{ open: isGuideOpened }">
   <div class="glass bright guide">
+    <img
+      class="close"
+      (click)="isGuideOpened = !isGuideOpened"
+      src="../../assets/svgs/times-no-circle.svg"
+      alt="" />
     <img src="../../assets/svgs/guide.svg" alt="guide" />
   </div>
 </div>
@@ -47,8 +49,6 @@
       (currentText)="updateCurrentText($event)"
       (isFocused)="textareaFocused($event)"></app-textarea>
   </div>
-  <app-keyboard
-    [practiceText]="currentPracticeText"
-    [currentIndex]="currentText.length"
-    [isFocused]="isKeyboardFocused"></app-keyboard>
+  <app-keyboard [nextKey]="currentPracticeText[currentText.length]" [isFocused]="isTextareaFocused">
+  </app-keyboard>
 </div>

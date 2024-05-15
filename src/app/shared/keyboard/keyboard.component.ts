@@ -6,8 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./keyboard.component.scss']
 })
 export class KeyboardComponent {
-  @Input() practiceText!: string;
-  @Input() currentIndex!: number;
+  @Input() nextKey!: string;
   @Input() isFocused!: boolean;
 
   row1 = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']'];

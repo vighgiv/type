@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 import { AuthService } from '../core/services/auth.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { AuthService } from '../core/services/auth.service';
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
-export class GameComponent implements OnInit {
+export class GameComponent {
   @ViewChild('board') board!: ElementRef;
 
   @HostListener('window:keypress', ['$event.key'])
@@ -115,8 +115,6 @@ export class GameComponent implements OnInit {
   points = 0;
 
   constructor(private authService: AuthService, private renderer: Renderer2) {}
-
-  ngOnInit() {}
 
   start() {
     this.timerId = setInterval(() => {
